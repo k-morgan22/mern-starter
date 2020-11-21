@@ -1,7 +1,6 @@
 {
   "name": "Mern-starter remote",
   "dockerComposeFile": [
-    "../docker-compose.yml",
 		"docker-compose.yml"
   ],
   "appPort": 3000,
@@ -12,7 +11,7 @@
   "extensions": [
     "wesbos.theme-cobalt2"
   ],
-  "workspaceFolder": "/workspace/mern-starter",
+  "workspaceFolder": "/workspace",
   "service": "client",
   "shutdownAction": "stopCompose"
 }

@@ -4,32 +4,32 @@ services:
     container_name: app-backend
     restart: always
     build: 
-      context: ..
-      dockerfile: backend/Dockerfile
+      context: ../backend
+      dockerfile: Dockerfile
     ports:
       - "3001:3001"
     volumes:
-      - ./backend:/app
+      - ../backend:/app
       - /app/node_modules
     depends_on:
       - database
   database:
     container_name: app-db
-    image: mongo
+    image: mongo:4.2
     ports:
       - "27017:27017"
   client: 
     container_name: app-frontend 
     build: 
-      context: ..
-      dockerfile: client/Dockerfile
+      context: ../client
+      dockerfile: Dockerfile
     ports: 
       - "3000:3000"
     volumes: 
       - ..:/workspace:cached
-      # - ./client:/app
-      # - /app/node_modules
+      - ../client:/app
+      - /app/node_modules
+    command: /bin/sh -c "while sleep 1000; do :; done"
     depends_on: 
       - database 
       - backend 
-    command: /bin/sh -c "while sleep 1000; do :; done"
