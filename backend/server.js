@@ -1,12 +1,13 @@
-
 const express = require('express'); 
 const mongoose = require('mongoose');
+// const cors = require('cors');
 const router = require('./routes/index');
 
 const app = express(); 
 const PORT = 3001; 
 const MONGODB_URI = "mongodb://app-db:27017/my_local_db"; 
 
+// app.use(cors())
 app.use(express.urlencoded({ extended: true })); 
 app.use(express.json());
 app.use('/api', router); 

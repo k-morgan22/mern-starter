@@ -1,17 +1,18 @@
 {
-  "name": "Mern-starter remote",
+  "name": "Mern-starter Frontend",
   "dockerComposeFile": [
-		"docker-compose.yml"
+		"../../docker-compose-vscode.yml"
   ],
   "appPort": 3000,
   "settings": {
-    "workbench.colorTheme": "Cobalt2",
+    "workbench.colorTheme": "Tokyo Night Light",
     "terminal.integrated.shell.linux": "/bin/bash"
   },
   "extensions": [
-    "wesbos.theme-cobalt2"
+    "enkia.tokyo-night"
   ],
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/workspace/client",
   "service": "client",
   "shutdownAction": "stopCompose"
 }
+
