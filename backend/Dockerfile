@@ -1,5 +1,8 @@
 FROM node:14-alpine
 
+#install bash, not included in alpine
+RUN apk add --update bash && rm -rf /var/cache/apk/*
+
 # Create App Directory
 WORKDIR /app
 

@@ -4,13 +4,15 @@ services:
     container_name: app-backend
     restart: always
     build: 
-      context: ../backend
+      context: ./backend
       dockerfile: Dockerfile
     ports:
       - "3001:3001"
     volumes:
-      - ../backend:/app
+      - .:/workspace:cached
+      - ./backend:/app
       - /app/node_modules
+    command: sleep infinity
     depends_on:
       - database
   database:
@@ -21,15 +23,15 @@ services:
   client: 
     container_name: app-frontend 
     build: 
-      context: ../client
+      context: ./client
       dockerfile: Dockerfile
     ports: 
       - "3000:3000"
     volumes: 
-      - ..:/workspace:cached
-      - ../client:/app
+      - .:/workspace:cached
+      - ./client:/app
       - /app/node_modules
-    command: /bin/sh -c "while sleep 1000; do :; done"
+    command: sleep infinity
     depends_on: 
       - database 
       - backend 
