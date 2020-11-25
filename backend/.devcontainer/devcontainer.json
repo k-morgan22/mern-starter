@@ -13,6 +13,7 @@
   ],
   "workspaceFolder": "/workspace/backend",
   "service": "backend",
+  "postCreateCommand": "yarn install",
   "shutdownAction": "stopCompose"
 }
 

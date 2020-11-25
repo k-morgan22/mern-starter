@@ -13,6 +13,7 @@
   ],
   "workspaceFolder": "/workspace/client",
   "service": "client",
+  "postCreateCommand": "yarn install",
   "shutdownAction": "stopCompose"
 }
 
