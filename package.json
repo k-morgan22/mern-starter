@@ -6,6 +6,7 @@
   "author": "kmorgan <kiki.morgan13@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "install:all": "yarn && concurrently \"cd client && yarn\" \"cd backend && yarn\"",
     "dev": "cross-env NODE_CONFIG_ENV=development concurrently \"cd backend && yarn run dev:local\" \"cd client && yarn start:local\""
   },
   "devDependencies": {
