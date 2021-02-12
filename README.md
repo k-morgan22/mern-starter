@@ -1,30 +1,13 @@
 # mern-starter
 
-
-## Flags
-
-```json
---create, -c create a project
---open, -o open a project
---list, -l list projects
---args, -a arguments for the vscode open command, path to file or folder you want to open
-
-```
+This is an articles app built using MERN stack that allows users to create, read, update, and delete articles 
 
 ## Downloading the tool:
 
-To download the npm tool, use the following command in a new terminal window
+You can either download the code zip folder or grab the code using git clone
 
 ```json
-npm i -g @kikimorgan/portable-cli
-```
-
-## Using the tool:
-
-To create a portable version of vs code with a mern project folder, use the create flag + project name
-
-```json
-portable-cli --create projectName
+git clone -b vscode-remote-ex https://github.com/k-morgan22/mern-starter.git
 ```
 
 ## Running the MERN app:
@@ -33,10 +16,10 @@ portable-cli --create projectName
 
 Start local version of mongodb 
 
-CD into MERN project root folder
+CD into mern-starter root folder
 
 ```json
-cd ~/Desktop/vscPortable/projectName/mern-starter
+cd ~/path/to/mern-starter/folder
 ```
 
 Install Dependencies
@@ -57,10 +40,10 @@ yarn run dev
 
 Start local docker desktop tool
 
-CD into project root folder
+CD into mern-starter root folder
 
 ```json
-cd ~/Desktop/vscPortable/projectName/mern-starter
+cd ~/path/to/mern-starter/folder
 ```
 
 Build & run docker containers
@@ -75,27 +58,27 @@ Open up web browser and navigate to web app
 http://localhost:3000
 ```
 
-### Remote Container extension:
+### VS Code Remote Container extension:
 
 The vscode remote development tool requires the frontend and backend to be open in separate containers, which means separate vscode windows. one window that controls the frontend and another that controls the backend
 
-CD into backend folder
+CD into the mern-starter backend folder
 
 ```json
-cd ~/Desktop/vscPortable/projectName/mern-starter/backend
+cd ~/path/to/mern-starter/folder/backend
 ```
 
-Use portable-cli tool to open backend folder in vs code portable
+open backend folder in vscode
 
 ```json
-portable-cli -o projectName -a .
+code .
 ```
 
 In the bottom left corner should be a small button
 
-![readme%20for%20vscode%2050db2db3c8ac4633b0a706c08cdbbce5/Untitled.png](https://code.visualstudio.com/assets/docs/remote/common/remote-dev-status-bar.png)
+![vscode-button.png](https://code.visualstudio.com/assets/docs/remote/common/remote-dev-status-bar.png)
 
-Clicking on it will open the remote container menu, click on “Reopen In Container”
+Clicking on it will open the remote container menu, click on “reopen in container”
 
 - or run the **Remote-Containers: Open Reopen In Container**... command from the Command Palette
 
@@ -107,19 +90,13 @@ After a successful installation, open the integrated terminal  and start the ba
 yarn run dev:docker
 ```
 
-CD into frontend folder
+CD into the mern-starter frontend folder
 
 ```json
-cd ~/Desktop/vscPortable/projectName/mern-starter/client
+cd ~/path/to/mern-starter/folder/client
 ```
 
-Use portable-cli tool to open frontend folder in vs code portable
-
-```json
-portable-cli -o projectName -a .
-```
-
-Repeat steps above to reopen in container
+Repeat the steps above to open the folder in VSCode and  reopen in container
 
 After a successful installation, open the integrated terminal  and start the frontend
 
